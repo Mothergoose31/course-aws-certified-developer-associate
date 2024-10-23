@@ -1,7 +1,8 @@
-const https = require('https');
-let url = "https://www.amazon.com";
+import https from 'https';
 
-exports.handler = async function(event) {
+const url = "https://www.amazon.com";
+
+export const handler = async function(event) {
     let statusCode;
     await new Promise(function(resolve, reject) {
         https.get(url, (res) => {
